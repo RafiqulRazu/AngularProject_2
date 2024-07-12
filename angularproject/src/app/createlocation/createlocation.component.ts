@@ -33,8 +33,8 @@ export class CreatelocationComponent implements OnInit{
       state: [''],
       photo: [''],
       availableUnits: [''],
-      wifi: [''],
-      laundry: ['']
+      wifi: [false],
+      laundry: [false]
     }
     )
   }

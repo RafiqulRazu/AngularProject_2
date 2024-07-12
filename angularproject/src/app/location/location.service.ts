@@ -8,7 +8,7 @@ import { Location } from './location.model';
 })
 export class LocationService {
 
-  baseUrl:string = "http://localhost:3000/locations";
+  private baseUrl:string = "http://localhost:3000/locations";
 
   constructor(private httpClient:HttpClient) {}
 
@@ -20,6 +20,10 @@ export class LocationService {
 
   createlocation(location: Location): Observable<any> {
     return this.httpClient.post(this.baseUrl, location);
+  }
+
+  deleteLocation(id:string):Observable<any>{
+    return this.httpClient.delete(this.baseUrl+"/"+id);
   }
    
 }
