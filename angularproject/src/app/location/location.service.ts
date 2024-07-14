@@ -25,5 +25,11 @@ export class LocationService {
   deleteLocation(id:string):Observable<any>{
     return this.httpClient.delete(this.baseUrl+"/"+id);
   }
+
+  getById(id: string): Observable<any> {
+
+    return this.httpClient.get(this.baseUrl + "/" + id);
+
+  }
    
 }
