@@ -27,12 +27,12 @@ export class UpdatelocationComponent implements OnInit{
     this.id= this.route.snapshot.params['id'];
     this.locationService.getById(this.id)
       .subscribe({
-          next: (res:any)=>{
+          next: res=>{
             this.location=res;
             console.log(res);
           },
 
-          error: (err:any)=>{
+          error: err=>{
             console.log(err);
           }
       });
