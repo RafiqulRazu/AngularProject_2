@@ -9,6 +9,7 @@ import { CreatelocationComponent } from './createlocation/createlocation.compone
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
+import { ServerModule } from '@angular/platform-server';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { UpdatelocationComponent } from './updatelocation/updatelocation.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    
+  
   ],
   providers: [
     provideClientHydration(),

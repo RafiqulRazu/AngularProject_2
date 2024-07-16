@@ -16,7 +16,7 @@ export class UpdatelocationComponent implements OnInit{
   constructor(
     private locationService: LocationService,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ){
     
   }
@@ -36,6 +36,18 @@ export class UpdatelocationComponent implements OnInit{
             console.log(err);
           }
       });
+  }
+
+  updateLocation(){
+    this.locationService.updateLocation(this.id, this.location)
+    .subscribe({
+      next: res=>{
+        this.router.navigate(['location']);
+      },
+      error: error=>{
+        console.log(error);
+      }
+    }); 
   }
 
 }

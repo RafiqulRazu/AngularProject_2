@@ -17,7 +17,7 @@
         <td>{{ location.state }}</td>
         <td>{{ location.availableUnits }}</td>
         <td>
-          <button class="btn btn-primary m-1">Edit</button>
+          <button class="btn btn-primary m-1" (click)="updateLocation(location.id)">Edit</button>
           <button class="btn btn-warning m-1" (click)="deleteLocation(location.id)">Delete</button>
         </td>
       </tr>
